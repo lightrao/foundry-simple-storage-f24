@@ -1,3 +1,5 @@
+Foundry Simple Storage
+
 1.install vscode
 
 2.install git 
@@ -27,7 +29,7 @@ cd foundry-simple-storage-f24
 code .
 forge init
 
-5.replace the files in script, src, test with the repository's
+5.replace the files in script, src, test with current repository's files
 DeploySimpleStorage.s.sol 
 SimpleStorage.sol 
 SimpleStorageTest.t.sol 
@@ -62,14 +64,14 @@ history -c
 We can get RPC URL of any chain for free using Alchemy.
 
 12.Deploying to a local chain III (Forge Script)
-create script file and then run:
+create script file for deploying and then run:
 forge script script/DeploySimpleStorage.s.sol
 forge script script/DeploySimpleStorage.s.sol --private-key <PRIVATE_KEY> --rpc-url http://127.0.0.1:8545 --broadcast 
 
 13.What is a transaction (But actually)
 deploy a contract is also a transaction, so you can give it value
 Transactions saved to: /home/parallels/LightTechZen/Patrick/foundry-simple-storage-f24/broadcast/DeploySimpleStorage.s.sol/31337/run-latest.json
-watch transaction information broadcasted to chain: transactions->transaction
+watch transaction information broadcasted to chain, check run-latest.json file: transactions->transaction
 check gas used in decimal, run:
 cast --to-base 0x714e1 dec
 v,r,s are values for the transaction's signature
@@ -131,7 +133,7 @@ click verify and publish
 19.Cleaning up the project
 format code run:
 forge fmt
-edit README.md 
+edit README.md to show reader what the project is used for  
 
 20.Alchemy & the mempool
 Create App 
